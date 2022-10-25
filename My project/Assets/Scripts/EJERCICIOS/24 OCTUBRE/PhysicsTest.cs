@@ -16,6 +16,7 @@ public class PhysicsTest : MonoBehaviour
     private void Start()
     {
         myRigidbody = GetComponent<Rigidbody>();
+        //myRigidbody.AddTorque(forceDirection * forceMagnitude, ForceMode.Impulse);
     }
 
     // Update is called once per frame
@@ -26,6 +27,18 @@ public class PhysicsTest : MonoBehaviour
 
     private void FixedUpdate()
     {
-        myRigidbody.AddForce(forceDirection * forceMagnitude, ForceMode.Force);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Detectada la colision");
+        MeshRenderer mesh = GetComponent<MeshRenderer>();
+
+        mesh.material.color = new Color(Random.Range(0, 1f), Random.Range(0, 1f), Random.Range(0, 1f));
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        Debug.Log("Estoy colisionando");
     }
 }
