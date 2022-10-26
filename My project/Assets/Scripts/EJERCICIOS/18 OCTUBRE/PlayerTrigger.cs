@@ -15,6 +15,18 @@ public class PlayerTrigger : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag(playerTag))
+        {
+            OnPlayerExit(other.gameObject);
+        }
+    }
+
+    public virtual void OnPlayerExit(GameObject playerObject)
+    {
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag(playerTag))
