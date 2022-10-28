@@ -487,3 +487,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToExplote: 2
   explosionParticlesPrefab: {fileID: 100010, guid: e0609132424a24844b1d53ad3d704fd9, type: 3}
+  explosionRadius: 2
+  explosionForce: 800
