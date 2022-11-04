@@ -13,6 +13,8 @@ public class GunScript : MonoBehaviour
 
     public float impactForce = 10f;
 
+    public int damageDealt = 1;
+
     private void Update()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -38,6 +40,12 @@ public class GunScript : MonoBehaviour
             if (rb != null)
             {
                 rb.AddForce(-hitInfo.normal * impactForce, ForceMode.Impulse);
+            }
+
+            Health health = hitInfo.collider.gameObject.GetComponent<Health>();
+            if (health != null)
+            {
+                health.TakeDmg(damageDealt);
             }
         }
         else
