@@ -20,6 +20,12 @@ public class ClickerManager : MonoBehaviour
 
     public Text numberOfClicksText;
 
+    public int targetNumberOfClicks = 10;
+
+    public Text gameOverText;
+
+    private string maxScoreKey = "maxScore";
+
     private void Start()
     {
     }
@@ -47,7 +53,7 @@ public class ClickerManager : MonoBehaviour
         if (timeIsTicking)
         {
             timeLeft -= Time.deltaTime;
-            timeLeftText.text = timeLeft.ToString();
+            timeLeftText.text = timeLeft.ToString("0.00");
 
             if (timeLeft < 0)
             {
@@ -61,5 +67,29 @@ public class ClickerManager : MonoBehaviour
     {
         gamePanel.SetActive(false);
         endPanel.SetActive(true);
+        CheckWinningConditions();
+    }
+
+    private void CheckWinningConditions()
+    {
+        if (numberOfClicks >= targetNumberOfClicks)
+        {
+            int maxScore = PlayerPrefs.GetInt(maxScoreKey);
+
+            if (numberOfClicks > maxScore)
+            {
+                gameOverText.text = "Felicidades has clickado " + numberOfClicks + " de los " + targetNumberOfClicks + " has alcanzado un nuevo record";
+
+                PlayerPrefs.SetInt(maxScoreKey, numberOfClicks);
+            }
+            else
+            {
+                gameOverText.text = "Felicidades has clickado " + numberOfClicks + " de los " + targetNumberOfClicks + " necesarios, el record son " + maxScore;
+            }
+        }
+        else
+        {
+            gameOverText.text = "Mi abuela haciendo el pino y con el ratón al revés haces más clicks que tú, no lo has conseguido";
+        }
     }
 }
