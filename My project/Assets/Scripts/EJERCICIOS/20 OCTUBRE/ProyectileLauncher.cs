@@ -10,12 +10,10 @@ public class ProyectileLauncher : MonoBehaviour
     public float timeToShoot = 1;
     private float timeSinceLastShoot = 0;
 
-    // Start is called before the first frame update
     private void Start()
     {
     }
 
-    // Update is called once per frame
     private void Update()
     {
         timeSinceLastShoot += Time.deltaTime;
