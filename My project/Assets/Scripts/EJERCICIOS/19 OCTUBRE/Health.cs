@@ -11,32 +11,45 @@ public class Health : MonoBehaviour
 
     private Vector3 InitialPosition;
 
-    public Text healthText;
+    public Image healthBar;
+
+    public void UpdateHealthBar()
+    {
+        healthBar.fillAmount = Mathf.InverseLerp(0, MaxHealth, currentHealth);
+    }
 
     private void Start()
     {
         InitialPosition = transform.position;
         currentHealth = MaxHealth;
-
-        if (healthText != null)
-        {
-            healthText.text = currentHealth.ToString();
-        }
+        UpdateHealthBar();
     }
 
     public void TakeDmg(int damageTaken)
     {
         currentHealth -= damageTaken;
 
-        if (healthText != null)
-        {
-            healthText.text = currentHealth.ToString();
-        }
-
         if (currentHealth <= 0)
         {
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             Die();
+        }
+        else
+        {
+            Debug.Log("Te han hecho daño, salud restante " + currentHealth);
+        }
+        UpdateHealthBar();
+    }
+
+    private void Update()
+    {
+        if (currentHealth <= 2)
+        {
+            healthBar.color = Color.red;
+        }
+        else
+        {
+            healthBar.color = Color.green;
         }
     }
 
