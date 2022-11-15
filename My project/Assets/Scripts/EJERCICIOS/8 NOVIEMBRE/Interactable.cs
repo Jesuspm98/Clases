@@ -7,7 +7,7 @@ public class Interactable : MonoBehaviour
 {
     public UnityEvent interactionEvent;
 
-    public void Interact()
+    public virtual void Interact()
     {
         if (interactionEvent != null)
         {
