@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9167a1453d18d46a3452f65ce24727, type: 3}
+  m_Name: Zemox y Gualek
+  m_EditorClassIdentifier: 
+  cardName: Zemox y Gualek
+  cardDescription: "No te cruces con estos 2, te quitar\xE1n el movil y no le rechistes,
+    porque si no te pegar\xE1n encima"
+  cardAttack: 5
+  cardDefence: 4
+  cardCost: 4
+  cardArt: {fileID: 21300000, guid: 71b5ef5f9e8e7224794851a65e760afc, type: 3}

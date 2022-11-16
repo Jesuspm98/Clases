@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9167a1453d18d46a3452f65ce24727, type: 3}
+  m_Name: Messi
+  m_EditorClassIdentifier: 
+  cardName: Messi
+  cardDescription: "Te dice: \"Siiii bueno...\" mientras se toca la oreja y te dice
+    todas las frases del Call of Duty Mobile, de la turra que te da recibes da\xF1o"
+  cardAttack: 7
+  cardDefence: 3
+  cardCost: 6
+  cardArt: {fileID: 21300000, guid: e97265c6874f6d34487d5869753ec5fd, type: 3}

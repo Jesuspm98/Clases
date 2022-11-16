@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9167a1453d18d46a3452f65ce24727, type: 3}
+  m_Name: Hasbulla
+  m_EditorClassIdentifier: 
+  cardName: Hasbulla
+  cardDescription: "Este enano cabr\xF3n pero adorable, cuando menos te lo esperes,
+    te da un gancho que te jode la tarde"
+  cardAttack: 9
+  cardDefence: 6
+  cardCost: 8
+  cardArt: {fileID: 21300000, guid: a6487bdeb64506e46b54cd774431c777, type: 3}
